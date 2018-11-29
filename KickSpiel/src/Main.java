@@ -7,6 +7,6 @@ public class Main {
 		System.out.println("Mit beiden Soﬂen?");
 		System.out.println("Tschuss Junge Mann");
 		
-		System.out.println("Ariciderci");
+		System.out.println("Arividerci");
 	}
 }
