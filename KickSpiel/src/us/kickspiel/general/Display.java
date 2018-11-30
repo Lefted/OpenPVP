@@ -1,34 +1,44 @@
 package us.kickspiel.general;
 
+import java.awt.Canvas;
+import java.awt.Dimension;
+
 import javax.swing.JFrame;
 
 public class Display {
 
 	String title;
-	int sizeX, sizeY;
-	
+	int width, height;
+
 	JFrame frame;
-	
-	public Display(String title, int sizeX, int sizeY) {
+	Canvas canvas;
+
+	public Display(String title, int width, int height) {
 		this.title = title;
-		this.sizeX = sizeX;
-		this.sizeY = sizeY;
-		
+		this.width = width;
+		this.height = height;
+
 		createDisplay();
 	}
-	
+
 	public void createDisplay() {
-		JFrame frame = new JFrame(title);
-		
+		frame = new JFrame(title);
+		canvas = new Canvas();
+
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
-		frame.setSize(sizeX, sizeY);
+		frame.setSize(width, height);
 		frame.setLocationRelativeTo(null);
-		
-		
+
+		canvas.setPreferredSize(new Dimension(width, height));
+		canvas.setMinimumSize(new Dimension(width, height));
+		canvas.setMaximumSize(new Dimension(width, height));
+		canvas.setFocusable(false);
+
+		frame.add(canvas);
 		frame.pack();
 		frame.setVisible(true);
-		
+
 	}
-	
+
 }
