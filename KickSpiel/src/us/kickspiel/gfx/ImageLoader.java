@@ -1,4 +1,4 @@
-package us.kickspiel.assets;
+package us.kickspiel.gfx;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
