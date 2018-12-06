@@ -17,6 +17,11 @@ public class GameState extends State {
 	@Override
 	public void tick() {
 		player.tick();
+		
+		if (player.getPosX() > 800) {
+			player.setPosX(-70);
+		}
+			
 	}
 
 	@Override
