@@ -29,7 +29,7 @@ public class Player extends Entity {
 		if (engine.getKeyManager().keyD) {
 			posX += velocity;
 		}
-		System.out.println(posY);
+		
 		teleportToBorder();
 	}
 

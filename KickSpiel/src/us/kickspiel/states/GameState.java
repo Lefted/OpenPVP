@@ -4,6 +4,7 @@ import java.awt.Graphics;
 
 import us.kickspiel.entitys.Player;
 import us.kickspiel.general.Engine;
+import us.kickspiel.gfx.Assets;
 
 public class GameState extends State {
 
@@ -21,6 +22,7 @@ public class GameState extends State {
 
 	@Override
 	public void render(Graphics gfx) {
+		gfx.drawImage(Assets.background, 0, 0, null);
 		player.render(gfx);
 	}
 
