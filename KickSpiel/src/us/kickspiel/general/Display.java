@@ -35,6 +35,7 @@ public class Display {
 		canvas.setMaximumSize(new Dimension(width, height));
 		canvas.setFocusable(false);
 
+		
 		frame.add(canvas);
 		frame.pack();
 		frame.setVisible(true);
