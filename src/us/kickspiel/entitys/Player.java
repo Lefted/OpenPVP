@@ -4,6 +4,8 @@ import java.awt.Graphics;
 
 import us.kickspiel.general.Engine;
 import us.kickspiel.gfx.Assets;
+import us.kickspiel.physics.Gravity;
+import us.kickspiel.physics.GrundCollision;
 
 public class Player extends Entity {
 
@@ -31,6 +33,9 @@ public class Player extends Entity {
 		}
 		
 		teleportToBorder();
+		System.out.println(posY);
+		Gravity.tick(this);
+		GrundCollision.tick(this);
 	}
 
 	@Override

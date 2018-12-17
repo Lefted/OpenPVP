@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import us.kickspiel.entitys.Player;
 import us.kickspiel.general.Engine;
 import us.kickspiel.gfx.Assets;
+import us.kickspiel.physics.Physics;
 
 public class GameState extends State {
 
@@ -17,7 +18,8 @@ public class GameState extends State {
 
 	@Override
 	public void tick() {
-		player.tick();			
+		player.tick();
+		Physics.tick();
 	}
 
 	@Override
