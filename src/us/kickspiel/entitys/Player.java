@@ -6,6 +6,7 @@ import us.kickspiel.general.Engine;
 import us.kickspiel.gfx.Assets;
 import us.kickspiel.physics.Gravity;
 import us.kickspiel.physics.GrundCollision;
+import us.kickspiel.states.GameState;
 
 public class Player extends Entity {
 
@@ -33,7 +34,7 @@ public class Player extends Entity {
 		}
 		
 		teleportToBorder();
-		System.out.println(posY);
+//		System.out.println(posY);
 		Gravity.tick(this);
 		GrundCollision.tick(this);
 	}
@@ -46,9 +47,15 @@ public class Player extends Entity {
 	private void teleportToBorder() {
 		if (posX > 870) {
 			posX = -70;
+			GameState.hasleftborders = true;
+		} else {
+			GameState.hasleftborders = false;
 		}
 		if (posX < -100) {
 			posX = 770;
+			GameState.hasleftborders = true;
+		} else {
+			GameState.hasleftborders = false;
 		}
 		if (posY > 660) {
 			posY = -70;
